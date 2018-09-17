@@ -1,0 +1,24 @@
+{
+  "author" : "Kevin Gutowksi & Ale Muñoz",
+  "commands" : [
+    {
+      "script" : "script.cocoascript",
+      "name" : "Select All Slices in Page",
+      "handlers" : {
+        "run" : "onRun"
+      },
+      "identifier" : "com.bohemiancoding.sketch.runscriptidentifier"
+    }
+  ],
+  "menu" : {
+    "title" : "Select All Slices in Page",
+    "items" : [
+      "com.bohemiancoding.sketch.runscriptidentifier"
+    ]
+  },
+  "identifier" : "com.example.sketch.cd1a5b90-bd30-4c10-ac42-91f0f31d4d22",
+  "version" : "1.0",
+  "description" : "Selects all the Slices in the current page",
+  "authorEmail" : "ale@sketchapp.com",
+  "name" : "Select All Slices in Page"
+}

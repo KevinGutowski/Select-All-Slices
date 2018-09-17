@@ -1,0 +1,23 @@
+var onRun = function(context) {
+var sketch = require('sketch')
+var document = sketch.getSelectedDocument()
+var page = document.selectedPage
+var selection = document.selectedLayers
+// First, clear the selection
+selection.clear()
+
+
+var exportableLayers = page.sketchObject.exportableLayers()
+for (i = 0; i < exportableLayers.length; i++) {
+    sketch.fromNative(exportableLayers[i])._object.select_byExtendingSelection(true, true);
+}
+
+page.layers.forEach(layer => {
+    console.log(layer)
+    if(layer._object.className() == "MSSliceLayer") {
+        // Slices do not inherit from Layer, so this with raw code:
+        layer._object.select_byExtendingSelection(true, true)
+      }
+    })
+};
+
